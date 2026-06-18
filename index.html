@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chúc mừng sinh nhật</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="birthday-title">
+      <canvas id="birthday-scene" class="scene-canvas" aria-hidden="true"></canvas>
+      <div class="shade"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Hôm nay là ngày của bạn</p>
+        <h1 id="birthday-title">Chúc mừng sinh nhật <span data-name>Hùng em</span>!</h1>
+        <p class="lead">
+          Mong tuổi mới của <span data-name>Hùng em</span> thật nhiều sức khỏe, bình yên,
+          may mắn và những niềm vui bất ngờ đến đúng lúc.
+        </p>
+        <div class="hero-actions" aria-label="Birthday actions">
+          <button class="primary-action" type="button" id="celebrateBtn" title="Bùng sáng lời chúc">
+            <span aria-hidden="true">*</span>
+            Bùng sáng
+          </button>
+          <button class="quiet-action" type="button" id="wishBtn" title="Mở một điều ước">
+            Điều ước
+          </button>
+        </div>
+      </div>
+
+      <aside class="control-panel" aria-label="Tùy chỉnh lời chúc">
+        <label for="nameInput">Tên người nhận</label>
+        <div class="input-row">
+          <input id="nameInput" type="text" value="Hùng em" maxlength="32" autocomplete="off">
+          <button type="button" id="copyBtn" title="Sao chép lời chúc">Sao chép</button>
+        </div>
+        <p id="wishLine" class="wish-line">Tuổi mới rực rỡ hơn những ngọn nến trên bánh.</p>
+      </aside>
+    </section>
+
+    <section class="photo-band" aria-label="Ảnh kỷ niệm">
+      <div class="photo-copy">
+        <p class="section-kicker">Khoảnh khắc nhỏ</p>
+        <h2>Một tấm ảnh để giữ lại ngày hôm nay.</h2>
+        <p>
+          Dù là một khoảnh khắc rất đời thường, nó vẫn xứng đáng được đặt cạnh lời chúc:
+          mong <span data-name>Hùng em</span> luôn có thêm nhiều ngày đáng nhớ như thế này.
+        </p>
+      </div>
+      <figure class="memory-photo">
+        <img src="./assets/birthday-photo.png" alt="Ảnh kỷ niệm sinh nhật">
+        <figcaption>Tuổi mới, thêm một kỷ niệm.</figcaption>
+      </figure>
+    </section>
+
+    <section class="message-band" aria-label="Loi chuc sinh nhat">
+      <article>
+        <p class="section-kicker">Gửi <span data-name>Hùng em</span></p>
+        <h2>Chúc bạn có một ngày sinh nhật thật ấm áp.</h2>
+        <p>
+          Chúc mọi điều <span data-name>Hùng em</span> mong sẽ có đủ thời gian để nở hoa,
+          mọi cố gắng đều được đáp lại, và mỗi ngày sau hôm nay đều có thêm một lý do để mỉm cười.
+        </p>
+      </article>
+      <div class="mini-notes" aria-hidden="true">
+        <span>Yêu thương</span>
+        <span>Niềm vui</span>
+        <span>Nụ cười</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
